@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manage Products</title>
+        <link rel="stylesheet" href="/css/main.min.css">
+        <link rel="stylesheet" href="/css/global.css">
+		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <script type="module" src="/js/navbar-admin.js"></script>
+        <script type="module" src="/js/users.js"></script>
+</head>
+
+<body class="bg-light">
+	<nav class="navbar sticky-top navbar-expand-md navbar-light py-0" style="background-color: white;">
+		<div class="container-fluid justify-content-center">
+		    <a class="navbar-brand col-9 col-md-2 ms-0 ms-md-4" href="#"><img src="/images/logo-text.png" alt="J&J" width="80"/></a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse col-9 col-md-10 navbar-collapse justify-content-end" id="navbarSupportedContent">
+				<div class="col-12 col-md-6"></div>
+				<ul class="navbar-nav col-12 col-md-auto justify-content-center mb-2 mb-lg-0">
+					<li class="nav-item col-sm-auto px-3 text-center py-2">
+						<a class="nav-link" href="dashboard.html">Dashboard</a>
+					</li>
+					<li class="nav-item nav-btn-track-orders col-sm-auto px-3 text-center py-2">
+						<a class="nav-link" href="products.html">Manage Products</a>
+					</li>
+					<li class="nav-item nav-btn-cart col-sm-auto px-3 text-center py-2">
+						<a class="nav-link" href="orders.html">Orders</a>
+					</li>
+					<li class="nav-item nav-btn-cart col-sm-auto px-3 text-center py-2 bg-primary">
+						<a class="nav-link active" aria-current="page" href="#">Manage Users</a>
+					</li>
+					<li class="nav-item nav-btn-avatar col-sm-auto px-3 text-center py-auto dropdown">
+						<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img class="user-avatar my-0 py-0" alt="">
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li><a class="dropdown-item text-center disabled text-primary" href="#"><img class="user-avatar my-0 py-0" alt=""></a></li>
+							<li><a class="dropdown-item text-center dropdown-text-email disabled text-primary" href="#">Email Address</a></li>
+							<li><a class="dropdown-item text-center text-danger" href="#" id="btnLogout">Log out</a></li>
+						</ul>
+					</li>
+				</ul>
+		    </div>
+		</div>
+	</nav>
+	
+	<div class="row">
+		<div class="col-12 pt-4 py-xl-4 pe-xl-4">
+			<div class="container rounded table-responsive bg-white p-4">
+				<div class="row">
+					<h5 class="text-start text-primary col-12 my-auto">Users</h5>
+
+					<div class="col-5 mt-3 invisible">
+						<!-- <div class="row">
+							<form class="col-12">
+								<div class="input-group">
+									<input autocomplete="off" id="etId" list="dlId" type="text" class="form-control" placeholder="Filter by ID" aria-label="Filter by ID">
+									<datalist id="dlId"></datalist>
+									<button class="btn btn-primary search-button" type="button" id="btnSearchId">
+										<i class="fi fi-br-search text-light mx-2" style="font-size: 0.8rem;"></i>
+									</button>
+								</div>
+							</form>
+						</div> -->
+					</div>
+
+					<div class="col-7 mt-3">
+						<div class="row">
+							<form class="col-12">
+								<div class="input-group">
+									<input autocomplete="off" id="etFirstName" list="dlFirstName" type="text" class="form-control" placeholder="First Name" aria-label="First Name">
+									<datalist id="dlFirstName"></datalist>
+									<input autocomplete="off" id="etLastName" list="dlLastName" type="text" class="form-control" placeholder="Last Name" aria-label="Last Name">
+									<datalist id="dlLastName"></datalist>
+									<button class="btn btn-primary search-button" type="button" id="btnSearchUser">
+										<i class="fi fi-br-search text-light mx-2" style="font-size: 0.8rem;"></i>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<table class="table align-middle mt-3">
+						<thead>
+							<tr>
+								<th scope="col" class="col-1">Name</th>
+								<th scope="col" class="col-2">Address</th>
+								<th scope="col" class="col-1">Mobile</th>
+								<th scope="col" class="col-2">Email</th>
+								<!-- <th scope="col" class="col-1">Email Verification</th> -->
+								<th scope="col" class="col-1">History</th>
+								<th scope="col" class="col-1">Delinquency</th>
+							</tr>
+						</thead>
+						<tbody id="tbodyUsers"></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="modalViewHistory" class="modal fade" tabindex="-1" aria-labelledby="tvUserName" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 id="tvUserName" class="modal-title fs-5 text-primary">User History</h1>
+					<button id="btnCloseModal" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body bg-light">
+					<div id="ordersContainer">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

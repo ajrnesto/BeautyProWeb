@@ -1,0 +1,43 @@
+html, body {
+	width: 100%;
+	margin: 0;
+	height: 100%;
+}
+
+.text-error {
+	display: none;
+}
+
+.user-avatar {
+	width: 35px;
+	height: 35px;
+}
+
+.custom-file-button input[type=file] {
+	margin-left: -2px !important;
+}
+    
+.custom-file-button input[type=file]::-webkit-file-upload-button {
+	display: none;
+}
+    
+.custom-file-button input[type=file]::file-selector-button {
+	display: none;
+}
+    
+.custom-file-button:hover label {
+	background-color: #dde0e3;
+	cursor: pointer;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

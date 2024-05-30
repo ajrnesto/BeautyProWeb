@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+/* custom variables go here */
+
+// color theming
+$primary: #070808;
+//$secondary: #68A357;
+$secondary: #070808;
+$light: #f7f7f7;
+$dark: #5a5a5a;
+$danger: #BC2C1A;
+$info: #2980ba;
+$success: #386C0B;
+
+// icons
+i {
+	color: $primary;
+	font-size: 3rem;
+}
+
+// font theming
+$font-family-sans-serif: "Open Sans";
+$headings-font-family: "Nunito";
+$headings-font-weight: 700;
+$headings-color: $primary;
+
+// navbar 
+$nav-pills-link-active-bg: $primary;
+
+.nav-link.active{
+    color: white !important;
+}
+
+// button theming
+.btn-primary {
+	color: white !important;
+}
+.btn-outline-primary:hover, .btn-outline-danger:hover, .btn-outline-dark:hover {
+    color: white !important;
+}
+
+// form theming
+:not(.search-button) {
+	$btn-border-radius: 4em;
+	$btn-padding-x: 3em;
+	$btn-padding-y: .6em;
+}
+
+// table theming
+$table-cell-padding-y: .5em;
+table thead tr {
+    font-family: "Nunito";
+}
+table thead tr th {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: $primary;
+}
+table tbody tr td {
+    font-size: 0.9rem !important;
+    font-weight: 500;
+}
+.btn-no-border {
+    border: none !important;
+}
+td > .btn-no-border {
+    font-size: 0.9rem !important;
+}
+
+// card theming
+//.col > .row > .card > .card-body > .card-text
+.card-text {
+	font-size: 2.8rem !important;
+    font-weight: 500 !important;
+}
+
+/*/ functions & variables for merging map variables
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+$custom-theme-colors: (
+    "altprimary": #1a1169,
+    "altsecondary": #9d6ff3
+);*/
+
+// import local compiled bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';

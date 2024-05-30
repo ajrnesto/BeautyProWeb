@@ -1,0 +1,10 @@
+0000000000000000000000000000000000000000 58ff37b8af162b7957c61e2f5cd027f6c07ba4c4 noru-github <106795056+noru-github@users.noreply.github.com> 1675774453 +0800	commit (initial): Initial commit
+58ff37b8af162b7957c61e2f5cd027f6c07ba4c4 8703a006b437af088a771b629deab768cdb309a6 noru-github <106795056+noru-github@users.noreply.github.com> 1675783163 +0800	commit: Initial commit
+8703a006b437af088a771b629deab768cdb309a6 0000000000000000000000000000000000000000 noru-github <106795056+noru-github@users.noreply.github.com> 1675784069 +0800	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 8703a006b437af088a771b629deab768cdb309a6 noru-github <106795056+noru-github@users.noreply.github.com> 1675784069 +0800	Branch: renamed refs/heads/master to refs/heads/main
+8703a006b437af088a771b629deab768cdb309a6 52a0d8897c29d1a94dc75f5f83b2b152f629ecc4 noru-github <106795056+noru-github@users.noreply.github.com> 1675843393 +0800	commit: Initial commit
+52a0d8897c29d1a94dc75f5f83b2b152f629ecc4 57b8948866662c283ead595fb06944afb70e2653 noru-github <106795056+noru-github@users.noreply.github.com> 1675843818 +0800	commit: Initial commit
+57b8948866662c283ead595fb06944afb70e2653 0f54e9b104af3f42523699f9544e66b43ef1ee11 noru-github <106795056+noru-github@users.noreply.github.com> 1675884268 +0800	commit: Initial commit
+0f54e9b104af3f42523699f9544e66b43ef1ee11 be26ef2baf84b8d45d831673efb66c88f1ec0165 noru-github <106795056+noru-github@users.noreply.github.com> 1675920575 +0800	commit: add shop client view
+be26ef2baf84b8d45d831673efb66c88f1ec0165 577fcc0fc787c94f135820fc49d266ea4b2e12fb noru-github <106795056+noru-github@users.noreply.github.com> 1675972103 +0800	commit: add add to cart
+577fcc0fc787c94f135820fc49d266ea4b2e12fb eb0b51b79a3947ab2239e5f3859eb242799fa2c3 noru-github <106795056+noru-github@users.noreply.github.com> 1676518024 +0800	commit: update cart, shop, track, dashboard, orders
